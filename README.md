@@ -16,7 +16,7 @@
 
 * **Dataset** contains 1000 dog images and 500 not-dog images
 
-## Reference
+## Dataset Reference
 
 * [Stanford Dog Breed Dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/)
 * [Dog vs Cat](https://www.kaggle.com/chetankv/dogs-cats-images/downloads/dogs-cats-images.zip/1)
