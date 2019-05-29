@@ -20,3 +20,7 @@
 
 * [Stanford Dog Breed Dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/)
 * [Dog vs Cat](https://www.kaggle.com/chetankv/dogs-cats-images/downloads/dogs-cats-images.zip/1)
+
+## Learning Resources
+
+* [Google Image Classification](https://developers.google.com/machine-learning/practica/image-classification/)
