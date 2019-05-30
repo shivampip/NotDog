@@ -6,11 +6,15 @@
 
 ## Timeline
 
-| Date        | Title           | Description  |
+| Date        | Maynak           | Shivam  |
 |:------------- |:-------------|:-----|
-| May 29      | Shri Ganesh | Idea finalization and Research |
-| May 30      | centered      |  Start Development  |
-| May 31 | are neat      |  - |
+| May 29      | Shri Ganesh | Shri Ganesh |
+| May 30      | Reading Covn Net  |  **Fill it bro**  |
+| May 31      | -  |  -  |
+| Jun 01      | -  |  -  |
+| Jun 02      | -  |  -  |
+| Jun 03      | -  |  -  |
+| Jun 04      | -  |  -  |
 
 ## Notes
 
