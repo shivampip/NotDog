@@ -10,7 +10,7 @@
 |:------------- |:-------------|:-----|
 | May 29      | Shri Ganesh | Shri Ganesh |
 | May 30      | **Fill it bro**  | Reading Conv. Net |
-| May 31      | -  |  -  |
+| May 31      | -  | Got intuition of CNN, Tried edge detection  |
 | Jun 01      | -  |  -  |
 | Jun 02      | -  |  -  |
 | Jun 03      | -  |  -  |
