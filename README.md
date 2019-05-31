@@ -28,3 +28,4 @@
 ## Learning Resources
 
 * [Google Image Classification](https://developers.google.com/machine-learning/practica/image-classification/)
+* [CNN Visualization](https://www.youtube.com/watch?v=f0t-OCG79-U)
