@@ -26,7 +26,7 @@ class ImgData:
 
 
 
-    def plot_sample(self, rows=4, cols= 4):
+    def plot_raw_sample(self, rows=4, cols= 4):
         pix= self.files_path[0:rows*cols]
         
         fig= plt.figure(figsize= (cols*2, rows*2))
@@ -39,19 +39,6 @@ class ImgData:
         plt.show()
 
 
-    def plot_processed_sample(self, count= 4):
-        if(count>len(self.out)):
-            count= len(self.out)
-        n= math.ceil(math.sqrt(count))
-        fig= plt.figure(figsize= (n*2, n*2))
-        for index in range(1, count+1):
-            img= self.out[index-1]
-            fig.add_subplot(n, n, index) 
-            plt.axis('off')
-            plt.imshow(img) 
-        plt.show()
-
-
     def process(self, size= (150,150), count= -1, silent=False):
         if(count==-1):
             self.n= self.count
@@ -59,30 +46,44 @@ class ImgData:
             self.n= count 
 
         self.resize(size= size, silent=silent)
-        #self.to_numpy()
+        return self.to_numpy(silent=silent)
 
         
 
 
     def resize(self, size=(150,150), silent=False):
+        print("Resizing", end= "")
         for path in self.files_path[:self.n]:
             if(not silent):
-                print("Resizing {}".format(path))
+                print(".", end="")
             img= load_img(path, target_size= size)
             self.out.append(img)
+        print(" DONE")
 
     
     
     def to_numpy(self, silent=False):
         nps= []
+        print("Converting to NP", end="")
         for index in range(self.n):
             if(not silent):
-                print("Converting {}".format(index))
+                print(".", end="")
             nps.append(img_to_array(self.out[index]))
-        return nps
+        print(" DONE")
+        return np.array([a for a in nps], dtype= np.int32)
         
-        
-
     
+
+    def plot_np_imgs(self, arr, count= 4):
+        n= math.ceil(math.sqrt(count))
+        fig= plt.figure(figsize= (n*2, n*2))
+        for index in range(1, count+1):
+            img= arr[index-1]
+            fig.add_subplot(n, n, index) 
+            plt.axis('off')
+            plt.imshow(img) 
+        plt.show()
+
+        
 
     
