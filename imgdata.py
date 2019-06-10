@@ -52,30 +52,32 @@ class ImgData:
         plt.show()
 
 
-    def process(self, size= (150,150), count= -1):
+    def process(self, size= (150,150), count= -1, silent=False):
         if(count==-1):
             self.n= self.count
         else:
             self.n= count 
 
-        self.resize(size= size)
+        self.resize(size= size, silent=silent)
         #self.to_numpy()
 
         
 
 
-    def resize(self, size=(150,150)):
+    def resize(self, size=(150,150), silent=False):
         for path in self.files_path[:self.n]:
-            print("Resizing {}".format(path))
+            if(not silent):
+                print("Resizing {}".format(path))
             img= load_img(path, target_size= size)
             self.out.append(img)
 
     
     
-    def to_numpy(self):
+    def to_numpy(self, silent=False):
         nps= []
         for index in range(self.n):
-            print("Converting {}".format(index))
+            if(not silent):
+                print("Converting {}".format(index))
             nps.append(img_to_array(self.out[index]))
         return nps
         
