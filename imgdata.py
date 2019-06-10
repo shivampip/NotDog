@@ -85,5 +85,13 @@ class ImgData:
         plt.show()
 
         
+    def shuffle(self, data):
+        X, y= data[0]
+        for i in range(1,len(data)):
+            XX, yy= data[i]
+            X= np.concatenate([X, XX], axis= 0)
+            y= np.concatenate([y, yy], axis= 0)
+        p= np.random.permutation(len(y))
+        return (X[p],y[p])
 
     
