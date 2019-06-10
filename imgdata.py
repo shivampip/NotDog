@@ -70,7 +70,8 @@ class ImgData:
                 print(".", end="")
             nps.append(img_to_array(self.out[index]))
         print(" DONE")
-        return np.array([a for a in nps], dtype= np.int32)
+        #return np.array([a for a in nps], dtype= np.int32)
+        return np.array([a for a in nps])
         
     
 
